@@ -1,0 +1,330 @@
+ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote,
+body, canvas, caption, center, cite, code, dd, del, details, dfn, dialog,
+div, dl, dt, em, embed, fieldset, figcaption, figure, font, footer, form,
+header, hgroup, hr, html, i, iframe, img, ins, kbd, label, legend, li, mark,
+menu, meter, nav, object, ol, output, p, pre, progress, q, rp, rt, ruby, s,
+samp, section, small, span, strike, strong, sub, summary, sup, table, tbody,
+td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+body, html {
+    overflow-x: hidden;
+    background: #000;
+    font-family: "Neue Haas Grotesk Text Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+html.open{
+    overflow-y: hidden;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup,
+menu, nav, section {
+    display: block
+}
+
+header{
+    position: fixed !important;
+    height: 0%;
+    width: 100%;
+    z-index: 9999; 
+}
+
+b, strong {
+    font-weight: 700
+}
+
+ol, ul {
+    list-style: none
+}
+
+li {
+    display: list-item;
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+caption, td, th {
+    font-weight: 400;
+    vertical-align: top;
+    text-align: left
+}
+
+q {
+    quotes: none
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.open-link{
+    cursor: pointer;
+    cursor: pointer;
+}
+
+q:after, q:before {
+    content: '';
+    content: none
+}
+
+small, sub, sup {
+    font-size: 70%;
+}
+
+sub, sup {
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -.25em
+}
+
+sup {
+    top: -.35em;
+    font-size: 0.75em;
+}
+
+svg {
+    overflow: hidden;
+}
+
+input, button, submit { 
+    border:none; } 
+
+.anchor {
+    cursor: pointer;   
+    -webkit-transition: all 0.3s cubic-bezier(.4,0,.2,1);
+    transition: all 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+.anchor:hover {
+    color: #5A5858;
+    -webkit-transition: all 0.3s cubic-bezier(.4,0,.2,1);
+    transition: all 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+img {
+    height: auto;
+    outline: 0;
+    border: 0;
+    width: 100%;
+    opacity: 1;
+}
+
+video {
+    width: 100%    !important;
+    height: auto   !important;
+}
+
+
+/*Hamburger*/
+
+.button_container {
+    position: fixed;
+    top: 0px;
+    z-index: 999;
+    right: 0px;
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    text-align: right;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.button_container span {
+    background: #E3E3E3;
+    width: 20px;
+    top: 8px;
+    height: 2px;
+    right: 20px;
+    position: fixed;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;  
+    cursor: pointer;
+}
+
+.button_container.open {
+    display: block;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.button_container.open .top {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.button_container.open .bottom {
+    -webkit-transform: translate(-0px, 0px);
+    transform: translate(-0px, 0px);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.button_container .top {
+    -webkit-transform: translate(0px, 5px);
+    transform: translate(0px, 5px);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.button_container .bottom {
+    -webkit-transform: translate(-0px, 10px);
+    transform: translate(-0px, 10px);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.button_container span:nth-of-type(2) {
+    top: 12px;
+    width: 20px;
+}
+
+.button_container.active .top {
+    -webkit-transform: translate(0px, 8px);
+    transform: translate(0px, 8px);
+}
+
+.button_container.active .bottom {
+    -webkit-transform: translate(-0px, 4px);
+    transform: translate(-0px, 4px);
+}
+
+.menu {
+    display: none;
+    opacity: 0;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    width: calc(100% - 20px);
+    overflow-x: hidden;
+    z-index: 100;
+    background: rgba(0,0,0,0.95);
+    cursor: pointer;
+}
+
+.menu.open{
+    display: block;
+    opacity: 1;
+}
+
+/*Toggle*/
+
+.page_toggle {
+    display: flex;
+    position: fixed;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    bottom: 0px;
+    width: 100%;
+    background-color: #000000;
+    opacity: 1;
+    z-index: 100;
+}
+
+.page_toggle .toggle-active {
+    margin-right: 2px;
+}
+
+.toggle-default {
+    background: rgba(100,100,100,0);
+    padding: 4px 8px 4px 10px;
+    border-radius: 50px;
+    opacity: 1;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.toggle-title {
+    display: flex; 
+}
+
+.toggle-title div {
+    background: #313131;
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+    margin-right: 8px;
+    margin-top: -1px;
+}
+
+.toggle-title div object{
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,1); 
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,.5);      
+    background: #E3E3E3;
+    margin: 3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+}
+
+.toggle-link {
+    display: flex; 
+}
+
+.toggle-link div {
+    background: #313131;
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+    margin-right: 8px;
+    margin-top: -1px;
+}
+
+.toggle-link div object{
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,1);  
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,.5);   
+    background: rgb(250, 250, 250, 0.1);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    margin: 3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+}
+
+.toggle-link:hover div object {  
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,1);  
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,1);  
+    background: rgb(250, 250, 250, 1);
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/*page transition*/
+
+.transition-fade {
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    opacity: 1;
+}
+html.is-animating .transition-fade {
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    opacity: 0;
+}
+
