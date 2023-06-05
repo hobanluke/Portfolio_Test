@@ -14,7 +14,7 @@ td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
 body, html {
     overflow-x: hidden;
     background: #000;
-    font-family: "Neue Haas Grotesk Text Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: 'Neue Haas Grotesk Text Pro', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 html.open{
