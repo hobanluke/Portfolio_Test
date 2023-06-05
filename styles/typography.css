@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-family: 'Neue Haas Grotesk Text Pro', "Helvetica", "Arial", sans-serif;
+    font-family: "Neue Haas Grotesk Text Pro", "Helvetica", "Arial", sans-serif;
     font-weight: 800;
     font-size: 280px;
     line-height: 0.88em;
@@ -20,7 +20,7 @@ h1 span{
 }
 
 h2 {
-    font-family: 'Helvetica', 'Neue Haas Grotesk Text Pro', "Arial", sans-serif;
+    font-family: 'Helvetica', "Neue Haas Grotesk Text Pro", "Arial", sans-serif;
     font-weight: 600;
     font-size: 12px;
     line-height: 1.08333333333em;
