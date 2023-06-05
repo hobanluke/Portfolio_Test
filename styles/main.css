@@ -125,6 +125,7 @@ img {
 video {
     width: 100%    !important;
     height: auto   !important;
+    background-color: #000000;    
 }
 
 
